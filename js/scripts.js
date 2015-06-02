@@ -39,7 +39,6 @@ function Movie(name, price, discount) {
   this.name     = name;
   this.price    = price;
   this.discount = discount;
-  debugger;
 }
 
 $(function() {

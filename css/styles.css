@@ -17,3 +17,20 @@ body {
   color: white;
   text-decoration: underline;
 }
+
+#result {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background: url("../images/clap.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+#result .overlay {
+  position: absolute;
+  top: 55px;
+  bottom: 55px;
+  left: 25px;
+  right: 25px;
+  background-color: rgba(0, 0, 0, .8);
+}
