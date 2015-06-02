@@ -1,0 +1,19 @@
+* {
+  color: white;
+}
+
+body {
+  background: url("../images/bg.jpg") no-repeat black;
+  background-size: cover;
+}
+
+.btn-default {
+  display: inline-block;
+  width: 100%;
+}
+
+.btn-default:hover {
+  background: black;
+  color: white;
+  text-decoration: underline;
+}
