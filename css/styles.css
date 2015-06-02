@@ -1,5 +1,6 @@
 * {
-  color: white;
+  color: #92CDCF;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 body {
@@ -26,11 +27,12 @@ body {
   background-size: 100% 100%;
 }
 
-#result .overlay {
-  position: absolute;
-  top: 55px;
-  bottom: 55px;
-  left: 25px;
-  right: 25px;
-  background-color: rgba(0, 0, 0, .8);
+#result {
+  text-align: center;
+}
+
+#result h3,
+#result h1 {
+  background: rgba(0,0,0,.9);
+  line-height: 100%;
 }

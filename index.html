@@ -13,7 +13,7 @@
     <h1 class="page-header text-center">Mystery Science Theater 3000</h1>
     <div class="row">
       <div class="col-sm-4 col-sm-offset-1 column">
-        <form>
+        <form id="tickets">
           <div class="form-group">
             <label for="movie-select">Choose movie:</label>
             <select id="movie-select" class="form-control">
@@ -21,13 +21,13 @@
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="options-matinee" id="no-matinee" checked>
+              <input type="radio" name="options-matinee" id="no-matinee" value="standard" checked>
               Standard showing
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="options-matinee" id="matinee">
+              <input type="radio" name="options-matinee" id="matinee" value="matinee">
               Matinee
             </label>
           </div>
@@ -45,9 +45,8 @@
 
       <div class="col-sm-4 col-sm-offset-1 column">
         <div id="result">
-          <div class="overlay">
-
-          </div>
+          <h1 class="name"></h3>
+          <h3 class="price"></h3>
         </div>
       </div>
     </div>

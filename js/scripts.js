@@ -23,9 +23,9 @@ Ticket.prototype.recalculatePrice = function() {
     this.price *= .8;
   }
 
-  if (this.age === "senior") {
+  if (this.age === "Senior") {
     this.price *= .8
-  } else if (this.age === "child") {
+  } else if (this.age === "Child") {
     this.price *= .5;
   }
 
@@ -41,16 +41,33 @@ function Movie(name, price, discount) {
   this.discount = discount;
 }
 
-$(function() {
+function findMovie(name) {
+  for (var i = 0; i < movies.length; i++) {
+    if (movies[i].name === name) {
+      return movies[i]
+    }
+  }
+}
 
+function isMatinee(text) {
+  return text === "matinee";
+}
+
+$(function() {
   // Populate available movies in dropdown
   movies.forEach(function(movie) {
     $("#movie-select").append("<option>" + movie.name + "</option>");
   });
 
-  $("form").submit(function(event) {
+  $("form#tickets").submit(function(event) {
     event.preventDefault();
 
-    //
+    var movie = findMovie($("select#movie-select").val());
+    var matinee = isMatinee($(".radio input:checked").val());
+    var age = $("#ticket-select").val();
+    var ticket = new Ticket(movie.name, movie.discount, age, matinee, movie.price)
+
+    $("#result .name").text(ticket.name);
+    $("#result .price").text("$" + parseFloat(ticket.price).toFixed(2));
   });
 });
